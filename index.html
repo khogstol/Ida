@@ -3,29 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Web Page</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Hei Cutiii</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Cute bilder</a></li>
-            <li><a href="#">Knap</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This is a simple HTML page with an associated CSS file to style its contents.</p>
-        </section>
-        <section>
-            <h2>Another Section</h2>
-            <p>More content can be added here.</p>
-        </section>
-    </main>
-    
+    <div class="login-container">
+        <h2>Hei Ida</h2>
+        <div class="error" id="error">Invalid username or password</div>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
