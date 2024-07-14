@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BADDI ALERT</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .content {
+            margin: 20px;
+            border: none;
+            /* Ensure no border */
+            text-align: center;
+        }
+
+        .content {
+            top: 300px;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        /* Make the image responsive */
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style the button and place it in the middle of the container/image */
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #555;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .container .btn:hover {
+            background-color: black;
+        }
+
+        #slideshow-container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Full viewport height */
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            /* Center horizontally */
+            text-align: center;
+        }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 600px;
+            /* Adjust height as needed */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 10px;
+            /* Space between image and button */
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        .prev {
+            left: 10px;
+            /* Adjust as needed */
+        }
+
+        .next {
+            right: 10px;
+            /* Adjust as needed */
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Ida + Kristian <3 <3 </h1>
+    </div>
+    <div class="menu-bar">
+        <a href="../klokka/klokka.html" class="menu-item">Klokka</a>
+        <a href="bildekollasj.html" class="menu-item">Cute Pictures</a>
+        <a href="../kart/kart.html" class="menu-item">Plag Meg</a>
+    </div>
+    <!-- <div class="content">
+        <img src="bilder/IMG_0983.JPEG" id="bilde" height="300px">
+    </div> -->
+    <div id="slideshow-container">
+        <div class="slide">
+            <img src="bilder/1.jpeg" alt="Bilde 1" id="bilde">
+        </div>
+        <a class="prev" onclick="byttBilde(-1)">&#10094;</a>
+        <a class="next" onclick="byttBilde(1)">&#10095;</a>
+    </div>
+    <script>
+        var slideIndex = 1;
+        var max = 12;
+
+        function byttBilde(n) {
+            var bilde = document.getElementById('bilde');
+            slideIndex += n;
+            if (slideIndex > max) {
+                slideIndex = 1;
+            } else if (slideIndex < 1) {
+                slideIndex = max;
+            }
+            bilde.src = 'bilder/' + slideIndex + '.jpeg'; // Endre stien til ditt andre bilde
+            bilde.alt = 'Bilde ' + slideIndex; // Endre alternativ tekst om nødvendig
+        }
+    </script>
+</body>
+
+</html>

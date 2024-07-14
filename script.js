@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (username === 'Ida+Kristian' && password === 'elskerDeg') {
         alert('Login successful!');
-        window.location.href = 'meny/meny.html';
+        window.location.href = 'klokka/klokka.html';
     } else {
         document.getElementById('error').style.display = 'block';
     }

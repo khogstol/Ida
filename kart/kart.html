@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ida er litt cute</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAo_m3mEqqo0CbKD3vekRlouQIpzbpzgw" defer></script>
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    #info {
+      margin: 20px;
+      text-align: center;
+      top: 400px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #map {
+      height: 700px;
+      width: 85%;
+    }
+
+    #infoTekst {
+      text-align: center;
+      top: 200px;
+      height: 30px; /* Fixed height */
+      line-height: 30px; /* Vertically center text */
+      overflow: hidden; /* Ensure overflow text is hidden */
+      white-space: nowrap; /* Prevent text wrapping */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Ida + Kristian <3 <3</h1>
+  </div>
+  <div class="menu-bar">
+    <a href="../klokka/klokka.html" class="menu-item">Klokka</a>
+    <a href="../bildekollasj/bildekollasj.html" class="menu-item">Cute Pictures</a>
+    <a href="kart.html" class="menu-item">Kart</a>
+  </div>
+  <h2 id="infoTekst"></h2>
+  <div id="info">
+    <input type="file" id="fileInput">
+  </div>
+  <div class="content">
+    <div id="map"></div>
+  </div>
+
+  <script src="filereader.js"></script>
+</body>
+
+</html>
