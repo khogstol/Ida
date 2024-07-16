@@ -136,26 +136,29 @@
     </div> -->
     <div id="slideshow-container">
         <div class="slide">
-            <img src="bilder/1.jpeg" alt="Bilde 1" id="bilde">
+            <img src="bilder/1.JPEG" alt="Bilde 1" id="bilde">
         </div>
         <a class="prev" onclick="byttBilde(-1)">&#10094;</a>
         <a class="next" onclick="byttBilde(1)">&#10095;</a>
     </div>
     <script>
         var slideIndex = 1;
-        var max = 12;
+        var maxValue = 65;
 
         function byttBilde(n) {
             var bilde = document.getElementById('bilde');
+
             slideIndex += n;
-            if (slideIndex > max) {
+            if (slideIndex > maxValue) {
                 slideIndex = 1;
             } else if (slideIndex < 1) {
-                slideIndex = max;
+                slideIndex = maxValue;
             }
-            bilde.src = 'bilder/' + slideIndex + '.jpeg'; // Endre stien til ditt andre bilde
+            bilde.src = '2024-07-16/' + slideIndex + '.jpg'; // Endre stien til ditt andre bilde
             bilde.alt = 'Bilde ' + slideIndex; // Endre alternativ tekst om nødvendig
         }
+
+
     </script>
 </body>
 
