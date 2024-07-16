@@ -80,6 +80,11 @@ function addMarkersFromText(text) {
         document.getElementById('infoTekst').textContent = "           ";
       });
 
+      marker.addListener('click', () => {
+        marker.setIcon(marker.hoverIcon);
+        document.getElementById('infoTekst').textContent = marker.title;
+      });
+
   
       markers.push(marker);
     }
